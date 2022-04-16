@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "string1",
+    "price": 1
+  },
+  {
+    "id": "2",
+    "name": "string2",
+    "price": 5
+  },
+  {
+    "id": "3",
+    "name": "string3",
+    "price": 7
+  }
+]
