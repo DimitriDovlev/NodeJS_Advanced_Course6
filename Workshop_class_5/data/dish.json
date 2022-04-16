@@ -1,16 +1,16 @@
 [
   {
-    "id": "1",
+    "id": "8a3d0cc8-0376-4c2c-98c5-814335947223",
     "name": "string1",
     "price": 1
   },
   {
-    "id": "2",
+    "id": "47d6479e-4bfb-4442-a287-31cde39c63ed",
     "name": "string2",
     "price": 5
   },
   {
-    "id": "3",
+    "id": "049b29bc-de23-448f-8665-728164ce9a59",
     "name": "string3",
     "price": 7
   }

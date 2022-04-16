@@ -14,7 +14,7 @@ class DishModel {
     const dishes = await this.getAllDishes();
 
     const foundDish = dishes.find((dish) => dish.id === dishId);
-
+    console.log(foundDish);
     if (foundDish) {
       return foundDish;
     } else {

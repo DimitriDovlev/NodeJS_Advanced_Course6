@@ -38,7 +38,6 @@ class DishController {
     try {
       const dish = req.body;
       const { id: dishId } = req.params;
-
       const updatedDish = await DishModel.updateDish(dishId, dish);
       res.status(200).send(updatedDish);
     } catch (error) {
@@ -50,9 +49,7 @@ class DishController {
   static async deleteDish(req, res) {
     try {
       const { id: dishId } = req.params;
-
       const deleteDish = await DishModel.deleteDish(dishId);
-
       res.status(200).send(deleteDish);
     } catch (error) {
       res.status(400).send(error);
