@@ -13,15 +13,5 @@
     "id": "a299b46f-398a-43b3-8711-7278536e366f",
     "dishName": "string2",
     "status": "string (new, cancelled, done)"
-  },
-  {
-    "id": "3a8a67cf-200a-45ed-b8e9-be47973f517a",
-    "dishName": "NekojDish",
-    "status": "string (new, cancelled, done)"
-  },
-  {
-    "id": "84be6989-bbbc-4880-871b-59bd951ac38f",
-    "dishName": "Dish1",
-    "status": "string (new, cancelled, done)"
   }
 ]

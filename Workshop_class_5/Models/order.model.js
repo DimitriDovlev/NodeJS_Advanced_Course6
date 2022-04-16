@@ -39,8 +39,6 @@ class OrderClass {
         const updatedDb = [...orders, newOrder];
         await DataService.saveJSONFile(orderPath, updatedDb);
         return newOrder;
-      } else {
-        return Promise.reject({ message: "No such dish found" });
       }
     }
 
