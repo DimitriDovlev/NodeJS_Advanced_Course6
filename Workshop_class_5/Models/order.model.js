@@ -3,6 +3,8 @@ const path = require("path");
 const { v4: uuid } = require("uuid");
 const { saveJSONFile } = require("../services/data-services");
 
+const DishModel = require("./dish.model");
+
 const orderPath = path.join(__dirname, "..", "data", "order.json");
 
 class OrderClass {
@@ -25,17 +27,23 @@ class OrderClass {
   //3. Create order
   static async createOrder(orderData) {
     const orders = await this.getAllOrder();
+    const dishes = await DishModel.getAllDishes();
 
     const newOrder = {
       id: uuid(),
       ...orderData,
     };
 
-    const updatedDb = [...orders, newOrder];
-    // const updatedDb = {...orders, newOrder};
+    for (let i = 0; i <= dishes.length; i++) {
+      if (dishes[i].name === newOrder.dishName) {
+        const updatedDb = [...orders, newOrder];
+        await DataService.saveJSONFile(orderPath, updatedDb);
+        return newOrder;
+      } else {
+        return Promise.reject({ message: "No such dish found" });
+      }
+    }
 
-    await DataService.saveJSONFile(orderPath, updatedDb);
-    return newOrder;
   }
 
   //4.1 Update order
@@ -57,10 +65,10 @@ class OrderClass {
     const foundOrder = await this.getOrderById(orderId);
     const updateStatus = orderData;
 
-    foundOrder.status=orderData;
+    foundOrder.status = orderData;
     const updatedStatus = { ...foundOrder };
 
-    console.log("updatedStatus: ",updatedStatus);
+    console.log("updatedStatus: ", updatedStatus);
     const updatedDb = orders.map((order) =>
       order.id === foundOrder.id ? updatedStatus : order
     );
