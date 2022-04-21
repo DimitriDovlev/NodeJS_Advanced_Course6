@@ -6,13 +6,14 @@ const bcrypt = require("bcryptjs");
 const usersPath = path.join(__dirname, "..", "data", "users.json");
 
 class User {
-  constructor(firstName, lastName, age, email, password) {
+  constructor(firstName, lastName, age, email, password, role) {
     this.id = uuid();
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
     this.email = email;
     this.password = password;
+    this.role = role;
   }
 }
 
@@ -37,7 +38,8 @@ class AuthModel {
       userData.lastName,
       userData.age,
       userData.email,
-      hashedPassword
+      hashedPassword,
+      userData.role
     );
 
     const updatedUserDb = [...users, newUser];

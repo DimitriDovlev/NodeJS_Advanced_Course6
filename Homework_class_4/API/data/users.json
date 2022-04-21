@@ -1,50 +1,20 @@
 [
   {
-    "id": "0eba4f80-9bb6-40f5-bffc-af233ed599e3",
-    "firstName": "John",
-    "lastName": "Doe",
-    "age": "29",
-    "email": "john@gmail.com",
-    "password": "$2a$08$jTh1u16f1in0dCxcsAeRB.l3rOe7BFmBTBpbz9pdIbotChyS7yHku"
-  },
-  {
-    "id": "b9265b1e-e40d-4f7b-b0c8-98aaf91515ec",
-    "firstName": "Test",
-    "lastName": "Testerson",
-    "age": "19",
-    "email": "test@yahoo.com",
-    "password": "$2a$08$sfZ8H/CenHprZGp.s/CDKe.PD/zam6HW/t3GN/tIqrPoNOuwDuMai"
-  },
-  {
-    "id": "f4dbd40e-c3ff-4fdd-ae72-e3f6f2aac681",
-    "firstName": "Ime1",
-    "lastName": "Prezime",
-    "age": 20,
-    "email": "ime@gmail.com",
-    "password": "$2a$08$hB3DMNn2IHlN8lx2JjJiPuwVpxVaZplSYT932Dbwk9jw2hJv6n6rC"
-  },
-  {
-    "id": "e612ec8c-a213-4035-bf6c-57a87a9e1e37",
-    "firstName": "Ime1",
+    "id": "fef48467-0e42-47b0-a8fb-ead05ab23a9b",
+    "firstName": "Ime",
     "lastName": "Prezime",
     "age": 20,
     "email": "ime1@gmail.com",
-    "password": "$2a$08$epqnWm5GMQulDqyoHUNDu.JdcHPcscC/rrXToj75jWK2lwRf57chG"
+    "password": "$2a$08$d0vGi1/wo2bInwaWYhjA4e6ehY7Rb0kxSJjBGhbavOyPY1l.7GpNO",
+    "role": "admin"
   },
   {
-    "id": "1970742a-6e5e-4e0d-8ad2-9d8f57f370e9",
-    "firstName": "Ime2",
+    "id": "e033ed58-02d5-467e-9d98-5c61b93252c2",
+    "firstName": "Ime",
     "lastName": "Prezime",
     "age": 20,
     "email": "ime2@gmail.com",
-    "password": "$2a$08$lICyTqPZS1yeL7NcHbT46.DFNBz02X71KmR.1zl.ofMj0634F9gga"
-  },
-  {
-    "id": "e3469cb6-758c-4e0f-9b13-651547ada84b",
-    "firstName": "Ime3",
-    "lastName": "Prezime",
-    "age": 20,
-    "email": "ime3@gmail.com",
-    "password": "$2a$08$d7puy4YBEuotrQN9PGs38ORPYFQn5DeCQdv6tfEwp3VB5p/3CaN6u"
+    "password": "$2a$08$M4x7/dv0HsjU5IrEMFX7I.30oCkLTsiEJjI.4QJ6CWSjIf2gw2S7i",
+    "role": "user"
   }
 ]
