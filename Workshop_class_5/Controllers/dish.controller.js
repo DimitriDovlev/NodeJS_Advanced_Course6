@@ -1,4 +1,4 @@
-const DishModel = require("../Models/dish.model");
+const DishModel = require("../models/dish.model");
 
 class DishController {
   // 1. Get all dish items from the DB

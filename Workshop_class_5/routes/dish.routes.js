@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const DishController = require("../Controllers/dish.controller");
+const DishController = require("../controllers/dish.controller");
 
 // 1. Get all dish items from the DB
 // http://localhost:5000/dish/

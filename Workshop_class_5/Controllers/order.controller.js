@@ -1,4 +1,4 @@
-const OrderClass = require("../Models/order.model");
+const OrderClass = require("../models/order.model");
 
 class OrderController {
   //1. Get all Orders
@@ -57,6 +57,15 @@ class OrderController {
   }
 
   //5. Delete order
+  static async deleteOrder(req, res) {
+    try {
+      const { id: orderId } = req.params;
+      const updatedDb = await OrderClass.deleteOrder(orderId);
+      res.status(200).send(updatedDb);
+    } catch (error) {
+      res.status(400).send(error);
+    }
+  }
 }
 
 module.exports = OrderController;

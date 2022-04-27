@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const OrderController = require("../Controllers/order.controller");
+const OrderController = require("../controllers/order.controller");
 
 //1. Get all Orders
 // http://localhost:5000/order/
@@ -17,4 +17,6 @@ router.patch("/:id", OrderController.updateOrder);
 // http://localhost:5000/order/status/:id
 router.patch("/status/:id", OrderController.updateStatus);
 //5. Delete order
+// http://localhost:5000/order/delete/:id
+router.delete("/delete/:id", OrderController.deleteOrder);
 module.exports = router;

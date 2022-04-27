@@ -29,6 +29,9 @@ class OrderClass {
     const orders = await this.getAllOrder();
     const dishes = await DishModel.getAllDishes();
 
+    //If the user enters an ID
+    if (orderData.id) return Promise.reject({ message: "Invalid entry" });
+
     const newOrder = {
       id: uuid(),
       ...orderData,
@@ -39,15 +42,19 @@ class OrderClass {
         const updatedDb = [...orders, newOrder];
         await DataService.saveJSONFile(orderPath, updatedDb);
         return newOrder;
+      }else{
+        return Promise.reject({message:"No such dish exists"})
       }
     }
-
   }
 
   //4.1 Update order
   static async updateOrder(orderId, orderData) {
     const orders = await this.getAllOrder();
     const foundOrder = await this.getOrderById(orderId);
+
+    //If the user enters an ID
+    if (orderData.id) return Promise.reject({ message: "Invalid entry" });
 
     const updatedOrder = { ...foundOrder, ...orderData };
 
@@ -75,6 +82,17 @@ class OrderClass {
   }
 
   //5. Delete order
+  static async deleteOrder(orderId) {
+    const orders = await this.getAllOrder();
+
+    const updatedDb = orders.filter((order) => order.id !== orderId);
+
+    if (updatedDb.length === orders.length)
+      return Promise.reject({ message: "No such item found" });
+
+    await DataService.saveJSONFile(orderPath, updatedDb);
+    return updatedDb;
+  }
 }
 
 module.exports = OrderClass;

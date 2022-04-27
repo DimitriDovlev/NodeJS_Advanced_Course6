@@ -14,7 +14,6 @@ class DishModel {
     const dishes = await this.getAllDishes();
 
     const foundDish = dishes.find((dish) => dish.id === dishId);
-    console.log(foundDish);
     if (foundDish) {
       return foundDish;
     } else {
@@ -24,6 +23,9 @@ class DishModel {
   // 3. Add new dish
   static async addNewDish(dishData) {
     const dishes = await this.getAllDishes();
+
+    //If the user enters an ID
+    if (dishData.id) return Promise.reject({ message: "Invalid entry" });
 
     const newDish = {
       id: uuid(),
@@ -44,6 +46,14 @@ class DishModel {
     const dishes = await this.getAllDishes();
     const foundDish = await this.getDishById(dishId);
 
+    //If the user enters an ID
+    if (dishData.id) return Promise.reject({ message: "Invalid entry" });
+
+    if (dishData.price > 1000 || dishData.price < 1) {
+      return Promise.reject({
+        message: "Price needs to be between 1 and 1000",
+      });
+    }
     const updatedItem = { ...foundDish, ...dishData };
 
     const updatedDb = dishes.map((dish) =>

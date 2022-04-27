@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
-const dishRoute = require("../Routes/dish.route");
-const orderRoute = require("../Routes/order.route");
+const dishRoute = require("../routes/dish.routes");
+const orderRoute = require("../routes/order.routes");
 
 //http://localhost:5000/dish
 router.use("/dish", dishRoute);
