@@ -29,6 +29,7 @@ class OrderController {
       const newOrder = await OrderClass.createOrder(order);
       res.status(200).send(newOrder);
     } catch (error) {
+      console.log(error);
       res.status(400).send(error);
     }
   }

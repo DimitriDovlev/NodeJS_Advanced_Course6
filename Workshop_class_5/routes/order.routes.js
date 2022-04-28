@@ -1,6 +1,10 @@
 const router = require("express").Router();
 const OrderController = require("../controllers/order.controller");
+const sessionValidator = require("../middleware/session.validation");
+const orderLength = require("../middleware/order-length.validation");
 
+// middleware to check if the user is logged in to use the routes
+router.use(sessionValidator);
 //1. Get all Orders
 // http://localhost:5000/order/
 router.get("/", OrderController.getAllOrder);
@@ -9,7 +13,7 @@ router.get("/", OrderController.getAllOrder);
 router.get("/:id", OrderController.getOrderById);
 //3. Create order
 // http://localhost:5000/order/add
-router.post("/add", OrderController.createOrder);
+router.post("/add", orderLength, OrderController.createOrder);
 //4.1 Update order
 // http://localhost:5000/order/:id
 router.patch("/:id", OrderController.updateOrder);

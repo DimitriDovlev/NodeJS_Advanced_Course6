@@ -36,15 +36,18 @@ class OrderClass {
       id: uuid(),
       ...orderData,
     };
-
-    for (let i = 0; i <= dishes.length; i++) {
+    let temp = false;
+    for (let i = 0; i < dishes.length; i++) {
       if (dishes[i].name === newOrder.dishName) {
         const updatedDb = [...orders, newOrder];
         await DataService.saveJSONFile(orderPath, updatedDb);
         return newOrder;
-      }else{
-        return Promise.reject({message:"No such dish exists"})
       }
+      temp = true;
+    }
+    console.log(temp);
+    if (temp) {
+      return Promise.reject({ message: "No such dish exists" });
     }
   }
 
