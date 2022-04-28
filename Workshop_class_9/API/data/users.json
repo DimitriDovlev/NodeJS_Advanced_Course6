@@ -1,0 +1,21 @@
+[
+  {
+    "id": "13c268c3-01b4-4135-8550-22c526a13af0",
+    "userName": "Korisnik1",
+    "password": "$2a$08$OX371/oWn5DcIbPGZu.VzeubY.iX0b79GdAtV5no7yjJMYDMV0Z/W",
+    "role": "User"
+  },
+  {
+    "id": "d1aa4940-35dc-4166-9ea2-eccef9aaa435",
+    "userName": "Korisnik2",
+    "password": "$2a$08$HL9ib3ej8kBCmdcTX7TcEun5fggv.WMV8N5HvB8yGhaiaCenor2CC",
+    "role": "User",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMWFhNDk0MC0zNWRjLTQxNjYtOWVhMi1lY2NlZjlhYWE0MzUiLCJpYXQiOjE2NTExNjkxMTIsImV4cCI6MTY1MTc3MzkxMn0.3zsfOXZpZzhEK3BoARbGpI-N2HxjVVZ3-5mMLSBtF9E"
+  },
+  {
+    "id": "bd0dbaad-e5f2-4093-bc99-778e030875d7",
+    "userName": "Korisnik3",
+    "password": "$2a$08$WBKofifAH7.jHawhAosMZOc0RLArVmPUguFwQv6rBxWVkaMQBu7DK",
+    "role": "User"
+  }
+]
