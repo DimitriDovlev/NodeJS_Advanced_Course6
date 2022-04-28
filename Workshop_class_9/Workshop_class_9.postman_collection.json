@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "91dcf921-95f7-486c-bc1f-fb3f77df5e54",
+		"name": "Workshop_class_9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Korisnik3\",\r\n    \"password\": \"123\",\r\n    \"role\": \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Korisnik2\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/d1aa4940-35dc-4166-9ea2-eccef9aaa435/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"d1aa4940-35dc-4166-9ea2-eccef9aaa435",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/refresh-token",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Dishes",
+			"item": [
+				{
+					"name": "Get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get dish by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish/8a3d0cc8-0376-4c2c-98c5-814335947223",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"8a3d0cc8-0376-4c2c-98c5-814335947223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new dish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"string6\",\r\n    \"price\": 67\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dish/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit dish",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dish1\",\r\n    \"price\": 10\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dish/8a3d0cc8-0376-4c2c-98c5-814335947223",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"8a3d0cc8-0376-4c2c-98c5-814335947223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dish",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish/delete/2cfecfd8-25f4-4836-b898-7ce50065d630",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"delete",
+								"2cfecfd8-25f4-4836-b898-7ce50065d630"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get all Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/220b84b3-9a93-4718-8ed2-eb8b7a7f445d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"220b84b3-9a93-4718-8ed2-eb8b7a7f445d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishName\": \"Dish2\",\r\n    \"status\": \"new123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishName\": \"Dish3\",\r\n    \"status\": \"done\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/1db46cc1-5381-4bdb-bbdc-95ad3216881f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"1db46cc1-5381-4bdb-bbdc-95ad3216881f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Cancelled\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/status/1db46cc1-5381-4bdb-bbdc-95ad3216881f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"status",
+								"1db46cc1-5381-4bdb-bbdc-95ad3216881f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/delete/ae281925-cddb-4d66-bc25-adf8deec925b",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"delete",
+								"ae281925-cddb-4d66-bc25-adf8deec925b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJkMWFhNDk0MC0zNWRjLTQxNjYtOWVhMi1lY2NlZjlhYWE0MzUiLCJpYXQiOjE2NTExNjkwMzAsImV4cCI6MTY1MTE2OTMzMH0.jcUYMDRtnk_YqF4f06wzJTBeCVyFR7bqahc2o3LEalI",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
