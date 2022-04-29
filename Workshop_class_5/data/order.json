@@ -13,15 +13,5 @@
     "id": "a299b46f-398a-43b3-8711-7278536e366f",
     "dishName": "string2",
     "status": "string (new, cancelled, done)"
-  },
-  {
-    "id": "090d26c3-2ca5-4a67-82af-62b1acc0d7ad",
-    "dishName": "Dish3",
-    "status": "new123"
-  },
-  {
-    "id": "a4431554-650c-4815-afb0-78de3234d368",
-    "dishName": "Dish2",
-    "status": "new123"
   }
 ]

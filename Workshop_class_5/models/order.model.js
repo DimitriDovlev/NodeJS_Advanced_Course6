@@ -45,7 +45,6 @@ class OrderClass {
       }
       temp = true;
     }
-    console.log(temp);
     if (temp) {
       return Promise.reject({ message: "No such dish exists" });
     }

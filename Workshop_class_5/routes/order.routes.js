@@ -4,7 +4,7 @@ const sessionValidator = require("../middleware/session.validation");
 const orderLength = require("../middleware/order-length.validation");
 
 // middleware to check if the user is logged in to use the routes
-router.use(sessionValidator);
+router.use(sessionValidator.sessionValidator);
 //1. Get all Orders
 // http://localhost:5000/order/
 router.get("/", OrderController.getAllOrder);

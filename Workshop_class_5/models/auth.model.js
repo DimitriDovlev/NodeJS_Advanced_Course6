@@ -16,10 +16,18 @@ class User {
 
 class AuthModel {
   //Test function
-  // 0. Get all users
+  // 0.1. Get all users
   static async getAllUsers() {
     const users = await DataService.readJSONFile(usersDataPath);
     return users;
+  }
+
+  // for session validation
+  // 0.2. Get user by id
+  static async getUserById(userId) {
+    const users = await this.getAllUsers();
+    const foundUser = users.find((user) => user.id === userId);
+    return foundUser;
   }
   // 1. Register user
   static async registerUser(userData) {
@@ -65,7 +73,6 @@ class AuthModel {
 
     return userWithoutPassword;
   }
-
 }
 
 module.exports = AuthModel;

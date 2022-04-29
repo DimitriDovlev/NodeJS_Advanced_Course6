@@ -16,5 +16,11 @@
     "userName": "test1234",
     "password": "$2a$08$IkzNxZq0rHzZtonHdu9ALeSJZ5/pkQm6f.9PDWMmHvfEZjPXPnLm2",
     "role": "user"
+  },
+  {
+    "id": "01528ce2-ff49-492a-a3fd-b028ceedc85d",
+    "userName": "admin1",
+    "password": "$2a$08$kMPyybiRXVUxsbha2yJ6j.4SFJsxI7KZKCR/siuGDoa9ACE9ZcBiC",
+    "role": "admin"
   }
 ]
