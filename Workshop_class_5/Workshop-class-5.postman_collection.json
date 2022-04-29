@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "fe921977-f208-43b8-abaf-87125fc2285d",
+		"name": "Workshop-class-5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dishes",
+			"item": [
+				{
+					"name": "Get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get dish by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish/8a3d0cc8-0376-4c2c-98c5-814335947223",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"8a3d0cc8-0376-4c2c-98c5-814335947223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new dish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"string6\",\r\n    \"price\": 67\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dish/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit dish",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dish1\",\r\n    \"price\": 10\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/dish/8a3d0cc8-0376-4c2c-98c5-814335947223",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"8a3d0cc8-0376-4c2c-98c5-814335947223"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dish",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/dish/delete/2cfecfd8-25f4-4836-b898-7ce50065d630",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"dish",
+								"delete",
+								"2cfecfd8-25f4-4836-b898-7ce50065d630"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get all Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/220b84b3-9a93-4718-8ed2-eb8b7a7f445d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"220b84b3-9a93-4718-8ed2-eb8b7a7f445d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishName\": \"Dish3\",\r\n    \"status\": \"new1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/add",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishName\": \"Dish3\",\r\n    \"status\": \"new123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/724aa171-f608-4cb1-9faf-a21d012c27ac",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"724aa171-f608-4cb1-9faf-a21d012c27ac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/order/status/65d51900-965e-4dca-a6ea-109f3231ba0d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"status",
+								"65d51900-965e-4dca-a6ea-109f3231ba0d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/order/delete/090d26c3-2ca5-4a67-82af-62b1acc0d7ad",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"order",
+								"delete",
+								"090d26c3-2ca5-4a67-82af-62b1acc0d7ad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"admin1\",\r\n    \"password\":\"123\",\r\n    \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"admin1\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
