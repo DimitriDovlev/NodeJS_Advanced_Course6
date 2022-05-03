@@ -25,7 +25,8 @@ class PostsModel {
   static async addPost(postData) {
     const posts = await this.getAllPosts();
 
-    if (!(postData.id == undefined)) {
+    // !(postData.id == undefined)
+    if (postData.id) {
       return Promise.reject({ message: "Invalid entry" });
     }
     const newPost = {
@@ -41,6 +42,10 @@ class PostsModel {
   // 4. Update post
   static async updatePost(postId, postData) {
     const posts = await this.getAllPosts();
+
+    if (postData.id) {
+      return Promise.reject({ message: "Invalid entry" });
+    }
 
     const foundPost = posts.find((post) => post.id === postId);
     if (!foundPost) return Promise.reject({ mesage: "No such post found" });

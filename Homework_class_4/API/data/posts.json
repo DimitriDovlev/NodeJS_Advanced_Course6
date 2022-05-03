@@ -5,5 +5,12 @@
     "image": "Post image",
     "editor": "John Doe",
     "description": "Post description"
+  },
+  {
+    "id": "172b0b89-3118-4237-96f7-b9e30c4cf7b5",
+    "headline": "Updated post headline 1",
+    "image": "Updated image 1",
+    "editor": "Jane Doe",
+    "description": "Updated description"
   }
 ]
