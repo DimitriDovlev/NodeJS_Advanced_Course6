@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "127833c4-2302-46d9-a2e9-ae8fd5296c6b",
+		"name": "Workshop-class-13",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dish",
+			"item": [
+				{
+					"name": "Get all dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dish-URL}}",
+							"host": [
+								"{{dish-URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get dish by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dish-URL}}/:id",
+							"host": [
+								"{{dish-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d516478d4346c3b4f5178"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add dish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orders\": \"627d4dffe4de49905e27277e\",\r\n    \"name\": \"dish2\",\r\n    \"price\": 10,\r\n    \"description\": \"kratok opis\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dish-URL}}",
+							"host": [
+								"{{dish-URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update dish",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dishUpdated\",\r\n    \"price\":10,\r\n    \"description\":\"kratok opis\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dish-URL}}/:id",
+							"host": [
+								"{{dish-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d3d0a06ca633dfb04ac39"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dish",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{dish-URL}}/:id",
+							"host": [
+								"{{dish-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d3d3a06ca633dfb04ac3c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get all orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{order-URL}}",
+							"host": [
+								"{{order-URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{order-URL}}/:id",
+							"host": [
+								"{{order-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d4dffe4de49905e27277e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishes\": [\r\n        \"627d3d0a06ca633dfb04ac39\",\r\n        \"627d4dd9e4de49905e27277a\"\r\n    ],\r\n    \"status\": \"new\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-URL}}",
+							"host": [
+								"{{order-URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dishes\": [\r\n        \"627d3d0a06ca633dfb04ac39\",\r\n        \"627d4dd9e4de49905e27277a\"\r\n    ],\r\n    \"status\": \"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-URL}}/:id",
+							"host": [
+								"{{order-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d4dffe4de49905e27277e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-URL}}/:id",
+							"host": [
+								"{{order-URL}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "627d4bd121b28ec8ab0eb517"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
