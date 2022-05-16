@@ -3,10 +3,16 @@ const OrderController = require("../controllers/order.controller");
 const sessionValidator = require("../middleware/session.validation");
 const tokenValidation = require("../middleware/token.validation");
 const orderLength = require("../middleware/order-length.validation");
+const roleValidation = require("../middleware/role.validation");
 
 // middleware to check if the user is logged in to use the routes
 // router.use(sessionValidator);
+
+//Protect all routes, so only authenticated user can access them
 router.use(tokenValidation);
+
+router.use(roleValidation);
+
 //1. Get all Orders
 // http://localhost:5000/order/
 router.get("/", OrderController.getAllOrder);

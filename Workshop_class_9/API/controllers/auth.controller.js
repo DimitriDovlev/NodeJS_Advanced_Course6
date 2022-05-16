@@ -69,7 +69,20 @@ class AuthController {
       console.log(refreshToken);
 
       if (!refreshToken) return res.sendStatus(403);
+
+      const { userId } = verifyRefreshToken(refreshToken);
+
+      const foundUser = await AuthModel.getUserById(userId);
+
+      if (!foundUser) return res.sendStatus(403);
+
+      if (refreshToken !== foundUser.refreshToken) return res.sendStatus(403);
+
+      const token = createAccessToken(foundUser.id);
+      console.log("new token", token);
+      res.status(200).send({ token });
     } catch (error) {
+      console.log(error);
       res.status(403).send(error);
     }
   }

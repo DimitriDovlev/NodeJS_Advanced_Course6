@@ -1,19 +1,36 @@
 const Joi = require("joi");
+const { verifyAccessToken, verifyRefreshToken } = require("../const/jwt.const");
+const AuthModel = require("../models/auth.model");
 
 const userSchema = Joi.object({});
 
 // Validation for user
-const userValidation = (req, res, next) => {
-  const userData = req.body;
-  console.log(req.headers);
+const roleValidation = async (req, res, next) => {
+  console.log("Method: ", req.method);
+  console.log(req.method=="GET");
+  const method=req.method;
+  const authorizationHeader = req.headers.authorization;
+  console.log("Auth: ", authorizationHeader);
+  const userToken = authorizationHeader.split(" ")[1];
+  console.log("User token: ", userToken);
+  const { userId } = verifyAccessToken(userToken);
+  const user = await AuthModel.getUserById(userId);
+  console.log(userId);
+  console.log(user);
 
-  next();
+  const userRole = user.role;
+  console.log(userRole);
+
+  if (userRole == "Admin") {
+    console.log("inside the if");
+    next();
+  }else if(userRole=="User" && (method=="GET")){
+    console.log("inside the second if");
+    next();
+  }else{
+    return res.sendStatus(403);
+  }
+  // next();
 };
 
-//
-const adminValidation = (req, res, next) => {
-  const userData = req.body;
-  console.log(req);
-};
-
-module.exports = userValidation;
+module.exports = roleValidation;

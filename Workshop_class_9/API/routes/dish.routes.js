@@ -7,12 +7,13 @@ const roleValidation = require("../middleware/role.validation");
 // middleware to check if the user is logged in to use the routes
 // router.use(sessionValidator);
 
-// router.use(tokenValidation);
-// router.use(roleValidation);
+//Protect all routes, so only authenticated user can access them
+router.use(tokenValidation);
+router.use(roleValidation);
 
 // 1. Get all dish items from the DB
 // http://localhost:5000/dish/
-router.get("/", roleValidation, DishController.getAllDishes);
+router.get("/", DishController.getAllDishes);
 // 2. Get dish by id
 // http://localhost:5000/dish/:id
 router.get("/:id", DishController.getDishById);
