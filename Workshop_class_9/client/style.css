@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login__page {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  margin: 10px;
+  align-items: center;
+  color: darkslategrey;
+  background-color: blanchedalmond;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+}
+
+.login_error-msg {
+  color: red;
+}
+.hide {
+  display: none;
+}
