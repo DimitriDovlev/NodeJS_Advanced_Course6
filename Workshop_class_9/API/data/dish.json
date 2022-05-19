@@ -13,5 +13,10 @@
     "id": "049b29bc-de23-448f-8665-728164ce9a59",
     "name": "Dish3",
     "price": 7
+  },
+  {
+    "id": "ff01a1d4-8a1a-4e2e-8af2-1a263530ea1b",
+    "name": "string6",
+    "price": 6
   }
 ]

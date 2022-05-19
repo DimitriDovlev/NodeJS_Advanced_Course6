@@ -60,7 +60,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"userName\": \"Korisnik1\",\r\n    \"password\": \"123\"\r\n}",
+							"raw": "{\r\n    \"userName\": \"Korisnik4\",\r\n    \"password\": \"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -206,7 +206,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"string6\",\r\n    \"price\": 6\r\n  }",
+							"raw": "{\r\n    \"name\": \"string6\",\r\n    \"price\": 6\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -278,7 +278,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OThlZGYxZi04MzQ4LTQ5ZmUtYWYzZS1kM2Y4Y2E5YmEyN2EiLCJpYXQiOjE2NTI3MjkzMTksImV4cCI6MTY1MjcyOTYxOX0.nwlLagEoDAijgcdWtxo4_3b8R3slRKJK70PFZRM1rtg",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OThlZGYxZi04MzQ4LTQ5ZmUtYWYzZS1kM2Y4Y2E5YmEyN2EiLCJpYXQiOjE2NTI5NzUyODMsImV4cCI6MTY1Mjk3NjE4M30.crG7tFdeS2B8V2vB2ru5i7Huzv21edG8hi6vOI0MX8Y",
 						"type": "string"
 					}
 				]
@@ -350,7 +350,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dishName\": \"Dish2\",\r\n    \"status\": \"new123\"\r\n}",
+							"raw": "{\r\n    \"dishName\": \"string6\",\r\n    \"status\": \"new123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -450,7 +450,7 @@
 				"bearer": [
 					{
 						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxM2MyNjhjMy0wMWI0LTQxMzUtODU1MC0yMmM1MjZhMTNhZjAiLCJpYXQiOjE2NTI3Mjk0OTksImV4cCI6MTY1MjczMDM5OX0.wwLvUUM_MTMGhM_IAvjupEGrEGCSmQvjezoyIjlroKQ",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0OThlZGYxZi04MzQ4LTQ5ZmUtYWYzZS1kM2Y4Y2E5YmEyN2EiLCJpYXQiOjE2NTI5NzU2NDQsImV4cCI6MTY1Mjk3NjU0NH0.yTfXdgEUmLftyOWBaVj755y5AdSBqjL7J5ObPJgHvIo",
 						"type": "string"
 					}
 				]

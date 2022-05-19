@@ -3,6 +3,7 @@ const DishController = require("../controllers/dish.controller");
 const sessionValidator = require("../middleware/session.validation");
 const tokenValidation = require("../middleware/token.validation");
 const roleValidation = require("../middleware/role.validation");
+const dishValidation = require("../middleware/dish.validation");
 
 // middleware to check if the user is logged in to use the routes
 // router.use(sessionValidator);
@@ -19,7 +20,7 @@ router.get("/", DishController.getAllDishes);
 router.get("/:id", DishController.getDishById);
 // 3. Add new dish
 // http://localhost:5000/dish/add
-router.post("/add", DishController.addNewDish);
+router.post("/add", dishValidation, DishController.addNewDish);
 // 4. Edit
 // http://localhost:5000/dish/:id
 router.patch("/:id", DishController.updateDish);

@@ -4,6 +4,7 @@ const sessionValidator = require("../middleware/session.validation");
 const tokenValidation = require("../middleware/token.validation");
 const orderLength = require("../middleware/order-length.validation");
 const roleValidation = require("../middleware/role.validation");
+const orderValidation = require("../middleware/order.validation");
 
 // middleware to check if the user is logged in to use the routes
 // router.use(sessionValidator);
@@ -21,7 +22,7 @@ router.get("/", OrderController.getAllOrder);
 router.get("/:id", OrderController.getOrderById);
 //3. Create order
 // http://localhost:5000/order/add
-router.post("/add", orderLength, OrderController.createOrder);
+router.post("/add", orderLength, orderValidation, OrderController.createOrder);
 //4.1 Update order
 // http://localhost:5000/order/:id
 router.patch("/:id", OrderController.updateOrder);
